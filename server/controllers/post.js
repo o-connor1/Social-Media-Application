@@ -5,8 +5,8 @@ const Post = require('../model/post')
 //create a post
 
 exports.createpost = async (req, res) => {
-    const { bio } = req.body
-    const { file } = req
+    const  bio  = req.body
+    const  file  = req.file
 
     try {
         const user_id = req.user_id
