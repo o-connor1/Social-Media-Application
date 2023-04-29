@@ -17,7 +17,7 @@ exports.authaccess=(req,res,next)=>{
     req.useremail=decode.email;
     req.user_id = decode.user_id;
      
-
+   next();
     }
     catch(err){
         return res.status(400).send("failed to varify")
