@@ -5,7 +5,7 @@ const Post = require('../model/post')
 //create a post
 
 exports.createpost = async (req, res) => {
-    const  bio  = req.body
+    const  {bio}  = req.body
     const  file  = req.file
 
     try {
