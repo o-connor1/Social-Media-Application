@@ -11,16 +11,15 @@ exports.authaccess=(req,res,next)=>{
 
 
     try{
-
-    const decode = jwt.verify(token,process.env.SECRET_KEY)
-
-    req.useremail=decode.email;
-    req.user_id = decode.user_id;
+      const decode = jwt.verify(token,process.env.SECRET_KEY)
+        
+      req.useremail = decode.email;
+      req.user_id = decode.user_id;
      
-   next();
+    next();
     }
     catch(err){
-        return res.status(400).send("failed to varify")
+      return res.status(400).send("failed to varify")
     }
     
     next()
